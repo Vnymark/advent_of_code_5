@@ -4,3 +4,7 @@ And just keep going.
 
 If the current unit reacts with the unit before it, they need to be invalidated and the list needs to be updated.
 
+
+Part 2:
+I need to subtract all kinds of characters from the Polymer, one by one (both lowercase and uppercase at the same time).
+Then I need to calculate the Polymer and count the lenght, save the lenght and which polymer I removed (just for fun).
