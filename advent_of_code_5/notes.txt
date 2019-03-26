@@ -1,0 +1,6 @@
+﻿I need to compare each unit with the unit that comes after or before, but not both.
+The easiest feels like comparing with the unit before, because then I can skip the first unit and store that in another variable.
+And just keep going.
+
+If the current unit reacts with the unit before it, they need to be invalidated and the list needs to be updated.
+
