@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace advent_of_code_5
 {
@@ -6,7 +9,9 @@ namespace advent_of_code_5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var inputPath = @"../../../input.txt";
+            string inputString = File.ReadAllText(inputPath);
+            char[] inputArray = inputString.ToCharArray(); ;
         }
     }
 }
