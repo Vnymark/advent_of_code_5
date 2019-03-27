@@ -29,7 +29,8 @@ namespace advent_of_code_5
             //Calculate Polymer
             List<Unit> ValidUnits = new List<Unit>();
             UpdateValidUnits();
-            Console.WriteLine(CalculatePolymer()); 
+            Console.WriteLine("Original Polymer lenght: {0}", UnitList.Count());
+            Console.WriteLine("Original Polymer lenght after reacting: {0}", CalculatePolymer());
             
             int CalculatePolymer()
             {
@@ -89,6 +90,7 @@ namespace advent_of_code_5
             int latestPolymerCount = 0;
             int lowestPolymerCount = 0;
             string lowestString = null;
+            Console.WriteLine("Calculating the shortest Polymer takes roughly 2 minutes.");
             foreach (string s in distinctStringArray)
             {
                 Console.WriteLine("Calculating Polymer without the unit type: {0}", s);
@@ -106,15 +108,14 @@ namespace advent_of_code_5
                 }
                 UpdateValidUnits();
                 latestPolymerCount = CalculatePolymer();
+                Console.WriteLine("Polymer lenght without {0}: {1}", s, latestPolymerCount);
                 if (lowestPolymerCount == 0 || lowestPolymerCount > latestPolymerCount)
                 {
                     lowestPolymerCount = latestPolymerCount;
                     lowestString = s;
                 }
-                
-
             }
-            Console.WriteLine("Polymer count: {0} Achived by removing unit type: {1}", lowestPolymerCount, lowestString);
+            Console.WriteLine("Shortest polymer count: {0} Achived by removing unit type: {1}", lowestPolymerCount, lowestString);
             Console.ReadKey();
         }
 
