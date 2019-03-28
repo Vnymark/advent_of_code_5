@@ -27,8 +27,7 @@ namespace advent_of_code_5
             }
 
             //Calculate Polymer
-            List<Unit> ValidUnits = new List<Unit>();
-            UpdateValidUnits();
+            List<Unit> ValidUnits = new List<Unit>(UnitList);
             Console.WriteLine("Original Polymer lenght: {0}", UnitList.Count());
             Console.WriteLine("Original Polymer lenght after reacting: {0}", CalculatePolymer());
             
@@ -71,20 +70,7 @@ namespace advent_of_code_5
                 }
                 return ValidUnits.Count();
             }
-
-            //Function to update which units still exist in the Polymer
-            void UpdateValidUnits()
-            {
-                ValidUnits = new List<Unit>();
-                foreach (Unit u in UnitList)
-                {
-                    if (u.Valid)
-                    {
-                        ValidUnits.Add(u);
-                    }
-                }
-            }
-
+            
             //Function to replace ValidUnits with the list the part2 calculation should be using.
             void ReplaceValidUnits(List<Unit> SUnit)
             {
